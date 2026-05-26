@@ -1,5 +1,8 @@
 import Config
 
+IO.inspect(System.get_env("BOT_TOKEN"), label: "BOT_TOKEN")
+IO.inspect(config_env(), label: "config_env")
+
 if config_env() == :prod do
   config :lanyard,
     http_port: String.to_integer(System.get_env("PORT") || "4001"),
